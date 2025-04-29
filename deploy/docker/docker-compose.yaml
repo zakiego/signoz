@@ -132,6 +132,10 @@ services:
       - GODEBUG=netdns=go
       - TELEMETRY_ENABLED=true
       - DEPLOYMENT_TYPE=docker-standalone-amd
+      - SIGNOZ_ALERTMANAGER_SIGNOZ_GLOBAL_SMTP__AUTH__PASSWORD=re_f3veCx3q_2RG6wSJH8Vbu3eQN1VZCxdjE
+      - SIGNOZ_ALERTMANAGER_SIGNOZ_GLOBAL_SMTP__AUTH__USERNAME=resend
+      - SIGNOZ_ALERTMANAGER_SIGNOZ_GLOBAL_SMTP__FROM=signoz@speechifylab.com
+      - SIGNOZ_ALERTMANAGER_SIGNOZ_GLOBAL_SMTP__SMARTHOST=smtp.resend.com:587
     healthcheck:
       test:
         - CMD
